@@ -1,56 +1,27 @@
-// class tanpa constructor "class polos"
-class Polos{
-    String dataString;
-    int dataInteger;
-}
+class Kalkulator{
+    double Perkalian;
+    double Penjumlahan;
+    double Pengurangan;
+    double Pembagian;
 
-// class dengan constructor
-class Mahasiswa{
-    // atribut
-    String nama;
-    String NIM;
-    String prodi;
+    Kalkulator (double Input1, double Input2, double Input3, double Input4){
+        Perkalian = Input1 * Input2 * Input3 * Input4;
+        Penjumlahan = Input1 + Input2 + Input3 + Input4;
+        Pengurangan = Input1 - Input2 - Input3 - Input4;
+        Pembagian = Input1 / Input2 / Input3 / Input4;
 
-    // constructor nama sama dengan nama class
-    // constructor dipanggil saat object pertama kali dibuat
-    // construkctor tidak mengembalikan nilai (tidak punya return)
-
-    //constructor dengan parameter
-    
-    Mahasiswa (String InputNama, String InputNIM, String InputProdi){
-        nama = InputNama;
-        NIM = InputNIM;
-        prodi = InputProdi;
-
-        // cetak
-        System.out.println("Nama Mahasiswa : " + nama);
-        System.out.println("NIM : " + NIM);
-        System.out.println("Prodi : " + prodi);
+        System.out.println("Hasil Perkalian: " + Perkalian);
+        System.out.println("Hasil Penjumlahan: " + Penjumlahan);
+        System.out.println("Hasil Pengurangan: " + Pengurangan);
+        System.out.println("Hasil Pembagian: " + Pembagian);
     }
-
 }
-
 
 
 public class App {
     public static void main(String[] args) throws Exception {
-        
-        // //instansiasi object class polos
-        // Polos objectPolos = new Polos();
+        Kalkulator Kalkulator1 = new Kalkulator(5, 2, 4, 10);
 
-        // // pengisian data
-        // objectPolos.dataString = "Polos";
-        // objectPolos.dataInteger = 10;
-
-        // // cetak
-        // System.out.println(objectPolos.dataString);
-        // System.out.println(objectPolos.dataInteger);
-
-        // instansiasi object class Mahasiswa
-        Mahasiswa mhs_1 = new Mahasiswa("ucup", 
-        "23231010", "Arsitek");
-        
-        Mahasiswa mhs_2 = new Mahasiswa("Udin", 
-        "11333355", "Kimia");
+        Kalkulator kalkulator2 = new Kalkulator(10, 5, 8, 4);
     }
 }
