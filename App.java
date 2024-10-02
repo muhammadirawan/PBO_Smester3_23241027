@@ -1,44 +1,56 @@
-// Membuat class sebagai template
+// class tanpa constructor "class polos"
+class Polos{
+    String dataString;
+    int dataInteger;
+}
 
+// class dengan constructor
 class Mahasiswa{
-    // Ciri-ciri atau atribut object
+    // atribut
     String nama;
     String NIM;
-    String jurusan;
-    double IPK;
-    int umur;
+    String prodi;
+
+    // constructor nama sama dengan nama class
+    // constructor dipanggil saat object pertama kali dibuat
+    // construkctor tidak mengembalikan nilai (tidak punya return)
+
+    //constructor dengan parameter
+    
+    Mahasiswa (String InputNama, String InputNIM, String InputProdi){
+        nama = InputNama;
+        NIM = InputNIM;
+        prodi = InputProdi;
+
+        // cetak
+        System.out.println("Nama Mahasiswa : " + nama);
+        System.out.println("NIM : " + NIM);
+        System.out.println("Prodi : " + prodi);
+    }
+
 }
 
 
+
 public class App {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         
-        // instansiasi object
-        Mahasiswa mhs_1 = new Mahasiswa();
-        mhs_1.nama = "Udin";
-        mhs_1.NIM = "11333355";
-        mhs_1.jurusan = "PTI";
-        mhs_1.IPK = 3.22;
-        mhs_1.umur = 25;
+        // //instansiasi object class polos
+        // Polos objectPolos = new Polos();
 
-        Mahasiswa mhs_2 = new Mahasiswa();
-        mhs_2.nama = "jojo";
-        mhs_2.NIM = "23232323";
-        mhs_2.jurusan = "Kimia";
-        mhs_2.IPK = 2.90;
-        mhs_2.umur = 23;
+        // // pengisian data
+        // objectPolos.dataString = "Polos";
+        // objectPolos.dataInteger = 10;
 
-        // Cetak object
-        System.out.println("Nama Mahasiswa : " + mhs_1.nama);
-        System.out.println("NIM : " + mhs_1.NIM);
-        System.out.println("Jurusan : " + mhs_1.jurusan);
-        System.out.println("IPK : " + mhs_1.IPK);
-        System.out.println("Umur : " + mhs_1.umur);
-        System.out.println();
-        System.out.println("Nama Mahasiswa : " + mhs_2.nama);
-        System.out.println("NIM : " + mhs_2.NIM);
-        System.out.println("Jurusan : " + mhs_2.jurusan);
-        System.out.println("IPK : " + mhs_2.IPK);
-        System.out.println("Umur : " + mhs_2.umur);
+        // // cetak
+        // System.out.println(objectPolos.dataString);
+        // System.out.println(objectPolos.dataInteger);
+
+        // instansiasi object class Mahasiswa
+        Mahasiswa mhs_1 = new Mahasiswa("ucup", 
+        "23231010", "Arsitek");
+        
+        Mahasiswa mhs_2 = new Mahasiswa("Udin", 
+        "11333355", "Kimia");
     }
 }
